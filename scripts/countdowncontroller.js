@@ -30,7 +30,9 @@ countdowncontroller.prototype.loadSuccess = function (data) {
 					var wins = outcomeTotals.wins;
 					var losses = outcomeTotals.losses;	
 					var gamesRemaining = 162 - gamesPlayed;
-					$('#content').append("Games remaining: " + gamesRemaining + ", Games played: " + gamesPlayed + ", wins: " + wins + ", losses: " + losses);			
+					var lossesNeeded = 100 - losses;
+
+					$('#content').append("The Cubs are " + wins + "-" + losses + ", only " + lossesNeeded + " more to reach 100!");			
 				}
 			}
 		}	
